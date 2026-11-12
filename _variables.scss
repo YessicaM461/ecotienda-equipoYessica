@@ -1,0 +1,27 @@
+
+// =====================================================
+// VOLTIENERG - VARIABLES Y MIXINS
+// =====================================================
+
+// Colores de la marca
+$color-principal: #123C35;
+$color-acento: #F2B84B;
+$color-fondo: #F4F8F5;
+$color-texto: #26332F;
+$color-suave: #DCEBE3;
+$color-secundario: #16865B;
+
+// Configuración visual
+$radio: 14px;
+$sombra: 0 4px 12px rgba(18, 60, 53, 0.12);
+
+// Diseño responsivo
+$tablet: 992px;
+$celular: 576px;
+
+// Mixin para tarjetas y contenedores
+@mixin caja($relleno: 16px) {
+    padding: $relleno;
+    border-radius: $radio;
+    box-shadow: $sombra;
+}
