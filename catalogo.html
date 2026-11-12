@@ -1,0 +1,161 @@
+
+    <!DOCTYPE html>
+    <!-- DOCTYPE: indica que esta pagina utiliza HTML5 -->
+    <html lang="es">
+
+    <head>
+        <!-- Permite mostrar correctamente tildes y caracteres especiales -->
+        <meta charset="UTF-8">
+
+        <!-- Adapta la pagina al ancho de celulares y otros dispositivos -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Titulo que aparece en la pestana del navegador -->
+        <title>Catálogo · Voltienerg</title>
+
+        <!-- Bootstrap: hoja de estilos externa -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+        <!-- Conexion con Google Fonts para utilizar Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Fuente Poppins -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+
+        <!-- Hoja de estilos propia de Voltienerg -->
+        <link rel="stylesheet" href="css/estilos.css">
+
+        <!-- Archivo JavaScript del catalogo y carrito.
+            defer hace que se ejecute despues de cargar el HTML -->
+        <script src="js/tienda.js" defer></script>
+    </head>
+
+    <!-- Cuerpo de la pagina -->
+    <body class="container py-3">
+
+        <!-- ENCABEZADO -->
+        <header class="encabezado">
+
+            <!-- Nombre de la tienda -->
+            <h1>Voltienerg</h1>
+
+            <!-- Eslogan -->
+            <p>Energía inteligente.</p>
+
+            <!-- Menu de navegacion -->
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main>
+
+            <!-- Titulo y descripcion del catalogo -->
+            <section id="intro">
+                <h2>Catálogo de productos</h2>
+                <p>
+                    Encuentra equipos eficientes que te ayudan a ahorrar energía
+                    y reducir el valor de tu factura.
+                </p>
+                <p>
+                    Cada producto muestra su precio y el ahorro mensual estimado,
+                    calculado con una tarifa de ejemplo de 950 COP/kWh.
+                </p>
+            </section>
+
+            <!-- FILTROS POR CATEGORIA -->
+            <section aria-label="Filtros de productos">
+
+                <h2>Explora nuestros productos</h2>
+
+                <div class="filtros">
+
+                    <!-- Muestra todos los productos -->
+                    <button class="filtro activo" data-categoria="todas">
+                        Todas
+                    </button>
+
+                    <!-- Muestra productos de iluminacion -->
+                    <button class="filtro" data-categoria="iluminacion">
+                        Iluminación
+                    </button>
+
+                    <!-- Muestra electrodomesticos -->
+                    <button class="filtro" data-categoria="electrodomesticos">
+                        Electrodomésticos
+                    </button>
+
+                    <!-- Muestra productos solares -->
+                    <button class="filtro" data-categoria="solar">
+                        Energía solar
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- CATALOGO Y CARRITO -->
+            <div class="catalogo">
+
+                <!-- CONTENEDOR DE PRODUCTOS -->
+                <!-- JavaScript genera aqui las tarjetas -->
+                <section aria-label="Lista de productos">
+
+                    <div id="productos" class="tarjetas">
+                        <!-- Los productos se cargan mediante JavaScript -->
+                    </div>
+
+                </section>
+
+                <!-- CARRITO DE COMPRAS -->
+                <aside id="carrito">
+
+                    <h2>Carrito de compras</h2>
+
+                    <p>Productos seleccionados:</p>
+
+                    <!-- Lista que JavaScript actualiza -->
+                    <ul id="lista-carrito"></ul>
+
+                    <!-- Total de la compra -->
+                    <p id="total">Total: $0</p>
+
+                    <!-- Ahorro mensual estimado -->
+                    <p id="ahorro">El carrito está vacío.</p>
+
+                    <!-- Boton para eliminar todos los productos -->
+                    <button id="vaciar" class="btn btn-outline-secondary btn-sm">
+                        Vaciar carrito
+                    </button>
+
+                </aside>
+
+            </div>
+
+        </main>
+
+        <!-- PIE DE PAGINA -->
+        <footer class="pie">
+
+            <p>
+                Los productos y sus precios son de ejemplo.
+            </p>
+
+            <p>
+                Voltienerg · Energía inteligente
+            </p>
+
+            <p>
+                Ingeniería Web I · IU Digital de Antioquia · 2026-2
+            </p>
+
+        </footer>
+
+    </body>
+    </html>
